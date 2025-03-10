@@ -182,5 +182,21 @@
           $('#city').text(data.region);
         })
       </script>
+
+    <script>
+        document.addEventListener("scroll", function() {
+            let containers = document.querySelectorAll(".iframe-container");
+            let scrollPosition = window.scrollY;
+
+            containers.forEach(container => {
+                let containerPosition = container.offsetTop;
+                if (scrollPosition + window.innerHeight > containerPosition + 50) {
+                    container.classList.add("visible");
+                } else {
+                    container.classList.remove("visible");
+                }
+            });
+        });
+    </script>
 </body>
 </html>
