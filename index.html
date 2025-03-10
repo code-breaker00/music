@@ -17,6 +17,14 @@
             text-align: center;
             flex: auto;
         }
+
+        .iframe-container {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .iframe-container.visible {
+            opacity: 1;
+        }
         
         h1 {
             color: white;
